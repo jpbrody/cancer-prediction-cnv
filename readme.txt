@@ -1,5 +1,5 @@
 Short version for experienced and impatient R users:
-	1. Change the "project" varaible on line 35 to your Google cloud project ID.
+	1. Change the "project" varaible to your Google cloud project ID.
 	2. Run AUC-ROC-plots.R   
         3. It uses your Google identity to download TCGA data from bigquery, so you need to authenticate yourself to Google.  A browser window will pop up asking for password/permission.  This query is about 1/4000th of the free monthly allocation provided by Google, so it won't cost you anything.
 	4. The AUC-ROC-plots.R will generate ROC graphs and compute AUC values.
@@ -7,16 +7,15 @@ Short version for experienced and impatient R users:
 ==================================================================
 Long version:
 
-The R script AUC-ROC-plots.R can be used to reproduce the results shown in the manuscript.
+The R script can be used to reproduce the results shown in the manuscript.
 
-You need to first install R to run AUC-ROC-plots.R .  R is available from https://www.r-project.org/  This script was tested with version 3.5.0, but should work with any recent version.
+You need to first install R to run this script .  R is available from https://www.r-project.org/  This script was tested with version 3.5.0, but should work with any recent version.
 
-AUC-ROC-plots.R will check for and install any necessary libraries.  Most should be straightforward and not cause problems.  
 
 The package H2O occasionally causes problems.  H2O requires java to run properly, and it doesn't work with java 9, the latest java release.  It needs java8.  See http://docs.h2o.ai/h2o/latest-stable/h2o-docs/faq/java.html
 
-Once R and the packages are properly installed, you need to change a single line in AUC-ROC-plots.R  
-Line 35 needs to be changed to your Google cloud project ID.  See the code/comments below.
+Once R and the packages are properly installed, you need to change a single line in the program.
+You needs to be change 'project' to your Google cloud project ID.  See the code/comments below.
 
 # This variable 'project' is the Google cloud project ID.  
 project<- "test-project-cgc"
