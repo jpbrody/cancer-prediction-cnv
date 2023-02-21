@@ -1,3 +1,11 @@
+This directory contains R code for the analysis of cancer data.  We are trying to "predict" which people have cancers.  Prediction is based on germ line DNA data.
+Anyone should be able to run AUC-ROC-plots.R  It will grab the necessary data from Bigquery.
+
+The directory also contains readl2rdata.R  You can view, but probably not run this program.  
+	This program requires you to first download a few TB of UK Biobank data (using "ukbgene -l2r -c1", "ukbgene -l2r -c2", etc). Then process the files to compute average L2r values for each cancer patient and normal patient.  I'm not allow to redistribute UKBiobank data, which is why you won't be able to run this without downloading and processing a few TB of data yourself.
+
+
+==================================================================
 Short version for experienced and impatient R users:
 	1. Change the "project" varaible to your Google cloud project ID.
 	2. Run AUC-ROC-plots.R   
